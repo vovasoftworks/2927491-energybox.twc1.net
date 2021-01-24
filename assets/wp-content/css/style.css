@@ -68,6 +68,23 @@ body{
  .elementor-48 .elementor-element.elementor-element-cd71721 .elementor-heading-title{
     font-family: 'DIN Pro';
     font-weight: bold;
+    font-size: 30px;
  }
 
- 
+ .elementor-widget:not(:last-child){
+     margin-bottom: 0;
+ }
+
+ .elementor-icon-box-description a{
+     color:#FC5A34;
+ }
+
+ .popular-models-title{
+     float:none;
+ }
+
+ .popular-models-title h2{
+    font-family: 'DIN Pro' !important;
+    font-weight: bold !important;
+    font-size: 30px !important;
+ }
