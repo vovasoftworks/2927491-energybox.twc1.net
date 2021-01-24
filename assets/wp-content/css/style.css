@@ -13,3 +13,17 @@
     font-family: 'DIN Pro';
     font-weight: bold;
 }
+
+
+.topmenu{
+    justify-content:center;
+    width: 100%;
+ }
+
+ .topmenu li{
+    align-items:center;
+ }
+
+ .elementor-top-column {
+     width: 100%;
+ }
