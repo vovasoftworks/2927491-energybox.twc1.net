@@ -1,3 +1,8 @@
+body{
+    font-weight: normal;
+}
+
+
 .elementor-1198 
 .elementor-element.elementor-element-ed13705 
 .boostify-menu > li > a{
@@ -31,3 +36,38 @@
  .apar-icon-search{
      margin-top: 3px;
  }
+
+ .elementor-48 .elementor-element.elementor-element-0c80414 > .elementor-container{
+     min-height: 300px;
+ }
+
+ .elementor-48 .elementor-element.elementor-element-0c80414:not(.elementor-motion-effects-element-type-background), .elementor-48 .elementor-element.elementor-element-0c80414 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
+     background-position: center center;
+ }
+
+ .elementor-48 .elementor-element.elementor-element-aae15a2 .apar-widget-search .apar-form-search--wrapper .apar-form-search-action .ymm-selector.ymm-box .block-content .ymm-submit-any-selection span{
+    font-family: 'DIN Pro';
+    font-weight: bold;
+    font-size: 14px;     
+ }
+ .apar-widget-search .apar-form-search--wrapper .apar-form-search-action .ymm-selector.ymm-box .block-content .ymm-submit-any-selection{
+     padding: 0;
+ }
+
+ .elementor-1198 .elementor-element.elementor-element-9e183f8 .boostify-mega-menu-vertical--widget .boostify-menu-toggle-vertical{
+    font-family: 'DIN Pro';
+    font-weight: normal;
+ }
+
+ .elementor-widget-ht-hf-mega-menu-vertical .boostify-menu > li > a,
+ .elementor-widget-ht-hf-mega-menu-vertical .boostify-menu > li > a:hover{
+    font-family: 'DIN Pro';
+    font-weight: normal;
+ }
+
+ .elementor-48 .elementor-element.elementor-element-cd71721 .elementor-heading-title{
+    font-family: 'DIN Pro';
+    font-weight: bold;
+ }
+
+ 
