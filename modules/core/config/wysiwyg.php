@@ -1,0 +1,40 @@
+<?php
+
+return array (
+	'theme' => '"silver"',
+	'plugins' => '[\'advlist autolink lists link image charmap print preview hr anchor pagebreak\', \'searchreplace wordcount visualblocks visualchars code fullscreen, insertdatetime media nonbreaking save table directionality\', \'emoticons template paste textpattern imagetools codesample toc importcss help\']',
+	'toolbar1' => '"undo redo | styleselect formatselect fontselect fontsizeselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink image media code preview table | cut copy paste | forecolor backcolor | hr removeformat | subscript superscript | pagebreak codesample emoticons"',
+	// 'toolbar2' => '""',
+	'image_advtab' => 'true',
+	'image_title' => 'true',
+	'menubar' => '"edit insert format view table help"',
+	'toolbar_items_size' => '"small"',
+	'insertdatetime_dateformat' => '"%d.%m.%Y"',
+	'insertdatetime_formats' => '["%d.%m.%Y", "%H:%M:%S"]',
+	'insertdatetime_timeformat' => '"%H:%M:%S"',
+	'valid_elements' => '"*[*]"',
+	'extended_valid_elements' => '"meta[*],i[*],noindex[*]"',
+	'file_picker_callback' => 'function (callback, value, meta) { HostCMSFileManager.fileBrowserCallBack(callback, value, meta) }',
+	'convert_urls' => 'false',
+	'relative_urls' => 'false',
+	'remove_script_host' => 'false',
+	'forced_root_block' => '"p"',
+	//'forced_root_block' => 'false', // + force_p_newlines should be 'false'
+	//'force_p_newlines' => 'false',
+	'entity_encoding' => '""',
+	'verify_html' => 'false',
+	'valid_children' => '"+body[style|meta],+footer[meta],+a[div|h1|h2|h3|h4|h5|h6|p|#text]"',
+	'browser_spellcheck' => 'true',
+	'importcss_append' => 'true',
+	'schema' => '"html5"',
+	'allow_unsafe_link_target' => 'false',
+	//'preview_styles' => 'false',
+	//'importcss_selector_filter' => '/\.prefix|\.otherprefix/',
+	'importcss_selector_filter' => 'function(selector) {
+		return selector.indexOf("body") === -1;
+	}',
+	//'allow_html_in_named_anchor' => 'true',
+	//'paste_as_text' => 'true',
+	//'height' => '500',
+	//'template_external_list_url' => '"/tinymce/list.js"',
+);
