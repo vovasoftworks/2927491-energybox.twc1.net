@@ -3,3 +3,4 @@ hostcmsfiles/backup
 hostcmsfiles/logs
 hostcmsfiles/tmp
 hostcmsfiles/update
+modules/core/config/database.php
