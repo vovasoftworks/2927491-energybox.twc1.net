@@ -88,3 +88,15 @@ body{
     font-weight: bold !important;
     font-size: 30px !important;
  }
+
+
+ .apar-icon-profile{
+    margin-top: 3px;
+    margin-right: -5px;
+ }
+
+.apar-icon-profile:before {
+    font-family: "FontAwesome" !important;
+    content: "\f2be";
+    font-weight: 400;
+}
