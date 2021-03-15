@@ -26,7 +26,7 @@ defined('HOSTCMS') || exit('HostCMS: access denied.');
  * @author Hostmake LLC
  * @copyright © 2005-2020 ООО "Хостмэйк" (Hostmake LLC), http://www.hostcms.ru
  */
-class Shop_Item_Import_Cml_Controller extends Core_Servant_Properties
+class Shop_Item_Import_Cml_Controller2 extends Core_Servant_Properties
 {
 	/**
 	 * Allowed object properties
