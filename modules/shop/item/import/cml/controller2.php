@@ -95,7 +95,8 @@ class Shop_Item_Import_Cml_Controller2 extends Core_Servant_Properties
 		"АКТИВНОСТЬ",
 		"ДЛИНА, ММ",
 		"ШИРИНА, ММ",
-		"ВЫСОТА, ММ"
+		"ВЫСОТА, ММ",
+		"ВЕС, КГ"
 	);
 
 	/**
@@ -1091,6 +1092,9 @@ class Shop_Item_Import_Cml_Controller2 extends Core_Servant_Properties
 				break;
 				case 'ВЫСОТА, ММ':
 					$oShop_Item->height = $sValue;
+				break;
+				case 'ВЕС, КГ':
+					$oShop_Item->weight = $sValue;
 				break;
 
 			}
