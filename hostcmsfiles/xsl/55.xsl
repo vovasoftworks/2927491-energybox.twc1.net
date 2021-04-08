@@ -84,7 +84,7 @@
 			</div>
 		</xsl:if>
 
-Showing all 16 results</p>
+</p>
 <form class="woocommerce-ordering" method="get">
 <select name="orderby" class="orderby" aria-label="Shop order">
                 <option value="menu_order" selected="selected">Default sorting</option>
@@ -308,12 +308,24 @@ Showing all 16 results</p>
 		<!--<span class="onsale">Sale !</span>-->
     
         <div class="product-image-wrapper">
-        <a href="https://apar.boostifythemes.com/product/arper-round/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-		<img width="330" height="330" src="https://apar.boostifythemes.com/wp-content/uploads/2020/06/17-1-330x330.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="image" loading="lazy" data-origin_src="https://apar.boostifythemes.com/wp-content/uploads/2020/06/17-1-330x330.jpg" />
-						<span class="hover-product-image" style="background-image: url(https://apar.boostifythemes.com/wp-content/uploads/2020/06/qqq.jpg);"></span>
+
+		<xsl:variable name="imgPath">
+			<xsl:choose>
+				<xsl:when test="image_large!=''">
+				<xsl:value-of select="dir" /><xsl:value-of select="image_small" />
+				</xsl:when>
+				<xsl:otherwise>
+				/assets/wp-content/uploads/no-image.png
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+
+        <a href="{url}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+		<img width="330" height="330" src="{$imgPath}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="image" loading="lazy" data-origin_src="{$imgPath}" />
+						<span class="hover-product-image" style="background-image: url({$imgPath});"></span>
         </a>			
 		<div class="loop-action loop-action--visible-on-mobile">
- 			<a href="{/shop/url}cart/?add={@id}" onclick="return $.addIntoCart('{/shop/url}cart/', {@id}, 1)" data-quantity="1" class="apar-add-to-cart-btn button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="321" data-product_sku="DN58286" aria-label="Add “Arper Round” to your cart">
+ 			<a href="{/shop/url}cart/?add={@id}" onclick="return $.addIntoCart('{/shop/url}cart/', {@id}, 1)" data-quantity="1" class="apar-add-to-cart-btn button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="321" data-product_sku="" aria-label="">
 			  <span class="tooltip">Добавить в корзину</span>
 			 </a>			
 		</div>
