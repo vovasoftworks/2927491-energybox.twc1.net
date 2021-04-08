@@ -9,7 +9,9 @@
 	<xsl:decimal-format name="my" decimal-separator="," grouping-separator=" "/>
 
 	<xsl:template match="/">
+	  
 		<xsl:apply-templates select="shop"/>
+	 
 	</xsl:template>
 
 	<xsl:variable name="n" select="number(3)"/>
@@ -18,20 +20,36 @@
 
 		<!-- Store parent id in a variable -->
 		<xsl:variable name="group" select="group"/>
+		
+		<!--<xsl:if test="count(shop_item) &gt; 0 or /shop/filter = 1">-->
+				<!-- дополнение пути для action, если выбрана метка -->
+		<xsl:variable name="form_tag_url"><xsl:if test="count(tag) = 1">tag/<xsl:value-of select="tag/urlencode"/>/</xsl:if></xsl:variable>
 
-		<xsl:choose>
+			<xsl:variable name="path"><xsl:choose>
+					<xsl:when test="/shop//shop_group[@id=$group]/node()"><xsl:value-of select="/shop//shop_group[@id=$group]/url"/></xsl:when>
+					<xsl:otherwise><xsl:value-of select="/shop/url"/></xsl:otherwise>
+			</xsl:choose></xsl:variable>
+		<!--</xsl:if>-->
+
+
+
+<div class="shop-container container with-right-sidebar has-flexible-sidebar">
+ 	<div class="shop-content">
+ 	
+	  <header class="woocommerce-products-header">
+            <xsl:choose>
 			<!-- SEO-filter's H1 and text -->
 			<xsl:when test="shop_filter_seo/node() and shop_filter_seo/h1 != ''">
-				<h1><xsl:value-of select="shop_filter_seo/h1"/></h1>
+				<h5 class="shop-title-search"><xsl:value-of select="shop_filter_seo/h1"/></h5>
 
 				<xsl:if test="page = 0 and shop_filter_seo/text != ''">
 					<div ><xsl:value-of disable-output-escaping="yes" select="shop_filter_seo/text"/></div>
 				</xsl:if>
 			</xsl:when>
 			<xsl:when test="$group = 0">
-				<h1 hostcms:id="{@id}" hostcms:field="name" hostcms:entity="shop">
+				<h5 class="shop-title-search">
 					<xsl:value-of select="name"/>
-				</h1>
+				</h5>
 
 				<!-- Description displays if there is no filtering by tags -->
 				<xsl:if test="count(tag) = 0 and page = 0 and description != ''">
@@ -39,9 +57,9 @@
 				</xsl:if>
 			</xsl:when>
 			<xsl:otherwise>
-				<h1 hostcms:id="{$group}" hostcms:field="name" hostcms:entity="shop_group">
+				<h5 class="shop-title-search">
 					<xsl:value-of select=".//shop_group[@id=$group]/name"/>
-				</h1>
+				</h5>
 
 				<!-- Description displayed only in the first page -->
 				<xsl:if test="page = 0 and .//shop_group[@id=$group]/description != ''">
@@ -49,40 +67,50 @@
 				</xsl:if>
 
 				<!-- Breadcrumbs -->
-				<p>
-					<xsl:apply-templates select=".//shop_group[@id=$group]" mode="breadCrumbs"/>
-				</p>
+	
 			</xsl:otherwise>
 		</xsl:choose>
+        </header>
 
-		<!-- Processing of the selected tag -->
-		<xsl:if test="count(tag)">
-		<p class="h2">&labelTag;<strong><xsl:value-of select="tag/name"/></strong>.</p>
-			<xsl:if test="tag/description != ''">
-				<p><xsl:value-of select="tag/description" disable-output-escaping="yes" /></p>
-			</xsl:if>
-		</xsl:if>
 
-		<xsl:variable name="count">1</xsl:variable>
+	<div class="woocommerce-notices-wrapper"></div>	
 
-		<!-- Show subgroups if there are subgroups and not processing of the selected tag -->
-		<xsl:if test="count(tag) = 0 and count(shop_producer) = 0 and count(//shop_group[parent_id=$group]) &gt; 0">
+<div class="shop-top-bar">
+<p class="woocommerce-result-count">
+
+	<xsl:if test="count(tag) = 0 and count(shop_producer) = 0 and count(//shop_group[parent_id=$group]) &gt; 0">
 			<div class="group_list">
 				<xsl:apply-templates select=".//shop_group[parent_id=$group][position() mod $n = 1]"/>
 			</div>
 		</xsl:if>
 
-		<xsl:if test="count(shop_item) &gt; 0 or /shop/filter = 1">
-			<!-- дополнение пути для action, если выбрана метка -->
-		<xsl:variable name="form_tag_url"><xsl:if test="count(tag) = 1">tag/<xsl:value-of select="tag/urlencode"/>/</xsl:if></xsl:variable>
+Showing all 16 results</p>
+<form class="woocommerce-ordering" method="get">
+<select name="orderby" class="orderby" aria-label="Shop order">
+                <option value="menu_order" selected="selected">Default sorting</option>
+                <option value="popularity">Sort by popularity</option>
+                <option value="rating">Sort by average rating</option>
+                <option value="date">Sort by latest</option>
+                <option value="price">Sort by price: low to high</option>
+                <option value="price-desc">Sort by price: high to low</option>
+        </select>
+<input type="hidden" name="paged" value="1" />
+</form>
+</div>
 
-			<xsl:variable name="path"><xsl:choose>
-					<xsl:when test="/shop//shop_group[@id=$group]/node()"><xsl:value-of select="/shop//shop_group[@id=$group]/url"/></xsl:when>
-					<xsl:otherwise><xsl:value-of select="/shop/url"/></xsl:otherwise>
-			</xsl:choose></xsl:variable>
+<ul class="products columns-4">
+						<!-- Выводим товары магазина -->
+						<xsl:apply-templates select="shop_item" />
+				</ul>
 
-			<form method="get" action="{$path}{$form_tag_url}">
-				<xsl:if test="1=0">
+	 </div>
+
+
+
+
+ 	<div class="widget-area shop-sidebar">
+		<form method="get" action="{$path}{$form_tag_url}">
+		<xsl:if test="1=0">
 					<div class="shop_filter">
 						<div class="sorting">
 							<select name="sorting" onchange="$(this).parents('form:first').submit()">
@@ -127,34 +155,36 @@
 						<input name="filter" class="button" value="&labelApply;" type="submit"/>
 					</div>
 				</xsl:if>
+				<!-- Filter String -->
+			<xsl:variable name="filter"><xsl:if test="/shop/filter_path/node() and /shop/filter_path != ''"><xsl:value-of select="/shop/filter_path"/></xsl:if></xsl:variable>
+			</form>
+ 	</div>
+
+ </div>
+		
+
+		
+
+		<!-- Processing of the selected tag -->
+
+
+		<xsl:variable name="count">1</xsl:variable>
+
+		<!-- Show subgroups if there are subgroups and not processing of the selected tag -->
+	
+
+		<xsl:if test="count(shop_item) &gt; 0 or /shop/filter = 1">
+			<!-- дополнение пути для action, если выбрана метка -->
+	
+
+			
+				
 				<!-- Таблица с элементами для сравнения -->
-				<xsl:if test="count(/shop/compare_items/compare_item) &gt; 0">
-					<table cellpadding="5px" cellspacing="0" border="0">
-						<tr>
-							<td>
-								<input type="checkbox" onclick="SelectAllItemsByPrefix(this.checked, 'del_compare_id_')" />
-							</td>
-							<td>
-								<b>&labelComparingItems;</b>
-							</td>
-						</tr>
-						<xsl:apply-templates select="compare_items/compare_item"/>
-					</table>
-				</xsl:if>
 
-				<div class="shop_block">
-					<div class="shop_table">
-						<!-- Выводим товары магазина -->
-						<xsl:apply-templates select="shop_item" />
-					</div>
-				</div>
 
-				<p class="button" id="compareButton">
-					<xsl:if test="count(/shop/comparing/shop_item) = 0">
-						<xsl:attribute name="style">display: none</xsl:attribute>
-					</xsl:if>
-					<a href="{/shop/url}compare_items/">&labelCompare;</a>
-				</p>
+				
+
+	
 
 				<xsl:if test="total &gt; 0 and limit &gt; 0">
 
@@ -206,7 +236,9 @@
 							<xsl:otherwise>0</xsl:otherwise>
 					</xsl:choose></xsl:variable>
 
-					<p>
+					<div class="container">
+					<nav class="ht-pagination">
+						<ul class="page-numbers">
 						<xsl:call-template name="for">
 							<xsl:with-param name="limit" select="limit"/>
 							<xsl:with-param name="page" select="page"/>
@@ -216,121 +248,105 @@
 							<xsl:with-param name="pre_count_page" select="$pre_count_page"/>
 							<xsl:with-param name="visible_pages" select="$real_visible_pages"/>
 						</xsl:call-template>
-					</p>
-				</xsl:if>
+						</ul>
+					</nav>
+					</div>
+				</xsl:if>				
 
-				<!-- Filter String -->
-			<xsl:variable name="filter"><xsl:if test="/shop/filter_path/node() and /shop/filter_path != ''"><xsl:value-of select="/shop/filter_path"/></xsl:if></xsl:variable>
-
-				<p style="float:right; margin: 0 40px 0 0">&labelShow;
-				<a href="{$path}{$filter}{$form_tag_url}?on_page=20">20</a><xsl:text> </xsl:text>
-				<a href="{$path}{$filter}{$form_tag_url}?on_page=50">50</a><xsl:text> </xsl:text>
-					<a href="{$path}{$filter}{$form_tag_url}?on_page=100">100</a>
-				</p>
+			
 				<div style="clear: both"></div>
-			</form>
+			
 		</xsl:if>
 
 		<!-- Есть избранные товары -->
-		<xsl:if test="favorite/shop_item">
-			<p class="h1 red">&labelFavoriteItems;</p>
-			<div class="shop_block">
-				<div class="shop_table">
-					<!-- Выводим товары магазина -->
-					<xsl:apply-templates select="favorite/shop_item[position() &lt; 4]" />
-				</div>
-			</div>
-		</xsl:if>
+
 
 		<!-- Есть просмотренные товары -->
-		<xsl:if test="viewed/shop_item">
-			<p class="h1 red">&labelViewedItems;</p>
-			<div class="shop_block">
-				<div class="shop_table">
-					<!-- Выводим товары магазина -->
-					<xsl:apply-templates select="viewed/shop_item[position() &lt; 4]" />
-				</div>
-			</div>
-		</xsl:if>
+
 
 		<!-- Есть производители-->
-		<xsl:if test="count(producers/shop_producer) > 0">
+		<!--<xsl:if test="count(producers/shop_producer) > 0">
 			<div style="margin-top: 40px">
 				<h1>&labelProducers;</h1>
 				<xsl:apply-templates select="producers/shop_producer"/>
 			</div>
-		</xsl:if>
+		</xsl:if>-->
 	</xsl:template>
 
 	<!-- Шаблон для товара -->
 	<xsl:template match="shop_item">
-		<div class="shop_item">
-			<div class="shop_table_item">
-				<div class="image_row">
-					<div class="image_cell">
-						<a href="{url}">
-							<xsl:choose>
+		
+
+		<!--<xsl:choose>
 								<xsl:when test="image_small != ''">
 									<img src="{dir}{image_small}" alt="{name}" title="{name}"/>
 								</xsl:when>
 								<xsl:otherwise>
 									<img src="/images/no-image.png" alt="{name}" title="{name}"/>
 								</xsl:otherwise>
-							</xsl:choose>
-						</a>
-					</div>
-				</div>
-				<div class="description_row">
-					<div class="description_sell">
-						<p>
-							<a href="{url}" title="{name}" hostcms:id="{@id}" hostcms:field="name" hostcms:entity="shop_item">
-								<xsl:value-of select="name"/>
-							</a>
-						</p>
-						<div class="price">
-						<xsl:value-of select="format-number(price, '### ##0,00', 'my')"/><xsl:text> </xsl:text><xsl:value-of select="currency"/><xsl:text> </xsl:text>
+							</xsl:choose>-->
 
-							<!-- Сравнение товаров -->
-							<xsl:variable name="shop_item_id" select="@id" />
-							<div class="compare" onclick="return $.addCompare('{/shop/url}', {@id}, this)">
-								<xsl:if test="/shop/comparing/shop_item[@id = $shop_item_id]/node()">
-									<xsl:attribute name="class">compare current</xsl:attribute>
-								</xsl:if>
-							</div>
-							<!-- Избранное -->
-							<div class="favorite" onclick="return $.addFavorite('{/shop/url}', {@id}, this)">
-								<xsl:if test="/shop/favorite/shop_item[@id = $shop_item_id]/node()">
-									<xsl:attribute name="class">favorite favorite_current</xsl:attribute>
-								</xsl:if>
-							</div>
 
-							<xsl:if test="count(shop_bonuses/shop_bonus)">
-								<div class="item-bonuses">
-									+<xsl:value-of select="shop_bonuses/total" /> &labelBonuses;
-								</div>
-							</xsl:if>
+	<xsl:variable name="itemClass">
+	product type-product post-321 status-publish instock product_cat-furniture product_cat-suspension product_cat-trending product_tag-car product_tag-home has-post-thumbnail sale shipping-taxable purchasable product-type-simple
+	</xsl:variable>
 
-							<!-- Ссылку на добавление в корзины выводим, если:
-							type = 0 - простой тип товара
-							type = 1 - электронный товар, при этом остаток на складе больше 0 или -1,
-							что означает неограниченное количество -->
-							<xsl:if test="type = 0 or (type = 1 and (digitals > 0 or digitals = -1)) or type = 2">
-								<div style="margin: 5px 0 15px 0">
-									<a href="{/shop/url}cart/?add={@id}" onclick="return $.addIntoCart('{/shop/url}cart/', {@id}, 1)" class="button2 white medium">
-										&labelBuy; →
-									</a>
-								</div>
-							</xsl:if>
-						</div>
-					</div>
-				</div>
-			</div>
+	<li class="{$itemClass}">
+        
+		<xsl:if test="position()=1">
+			 <xsl:attribute name="class">
+     		 <xsl:value-of select="concat($itemClass,' first')"/>
+   			 </xsl:attribute>
+	   </xsl:if>
+
+	   <xsl:if test="position() mod 4 = 0 ">
+	   		 <xsl:attribute name="class">
+     		 <xsl:value-of select="concat($itemClass,' last')"/>
+   			 </xsl:attribute>
+	   </xsl:if>
+		
+		<!--<span class="onsale">Sale !</span>-->
+    
+        <div class="product-image-wrapper">
+        <a href="https://apar.boostifythemes.com/product/arper-round/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+		<img width="330" height="330" src="https://apar.boostifythemes.com/wp-content/uploads/2020/06/17-1-330x330.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="image" loading="lazy" data-origin_src="https://apar.boostifythemes.com/wp-content/uploads/2020/06/17-1-330x330.jpg" />
+						<span class="hover-product-image" style="background-image: url(https://apar.boostifythemes.com/wp-content/uploads/2020/06/qqq.jpg);"></span>
+        </a>			
+		<div class="loop-action loop-action--visible-on-mobile">
+ 			<a href="{/shop/url}cart/?add={@id}" onclick="return $.addIntoCart('{/shop/url}cart/', {@id}, 1)" data-quantity="1" class="apar-add-to-cart-btn button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="321" data-product_sku="DN58286" aria-label="Add “Arper Round” to your cart">
+			  <span class="tooltip">Добавить в корзину</span>
+			 </a>			
 		</div>
 
-		<xsl:if test="position() mod 3 = 0 and position() != last()">
-			<span class="table_row"></span>
-		</xsl:if>
-	</xsl:template>
+        </div>
+
+        <h2 class="woocommerce-loop-product__title">
+    		<a href="{url}"><xsl:value-of select="name"/></a>
+		</h2>
+
+		<span class="price">
+			<span class="woocs_price_code" data-product-id="321">
+				<!--<del>
+					<span class="woocommerce-Price-amount amount">
+						<bdi>
+							<span class="woocommerce-Price-currencySymbol">$</span>249.90
+						</bdi>
+					</span>
+				</del>-->
+				 <ins>
+				 	<span class="woocommerce-Price-amount amount">
+				 		<bdi>
+						 <xsl:value-of select="format-number(price, '### ##0', 'my')"/><xsl:text> </xsl:text><span class="woocommerce-Price-currencySymbol">руб.</span>
+						 </bdi>
+					</span>
+				</ins>
+			</span>
+		</span>
+<xsl:if test="type = 0 or (type = 1 and (digitals > 0 or digitals = -1)) or type = 2">
+	<a href="{/shop/url}cart/?add={@id}" onclick="return $.addIntoCart('{/shop/url}cart/', {@id}, 1)" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="321" data-product_sku="DN58286" aria-label="Add “Arper Round” to your cart" rel="nofollow"></a>
+</xsl:if>
+</li>
+</xsl:template>
 
 	<!-- Шаблон для групп товара -->
 	<xsl:template match="shop_group">
@@ -505,6 +521,9 @@
 	<xsl:if test="position() != last()"><xsl:text>, </xsl:text></xsl:if>
 	</xsl:template>
 
+
+
+
 	<!-- Pagination -->
 	<xsl:template name="for">
 
@@ -524,17 +543,8 @@
 				<xsl:otherwise>0</xsl:otherwise>
 		</xsl:choose></xsl:variable>
 
-		<xsl:if test="$i = $start_page and $page != 0">
-			<span class="ctrl">
-				← Ctrl
-			</span>
-		</xsl:if>
+		
 
-		<xsl:if test="$i = ($page + $post_count_page + 1) and $n != ($page+1)">
-			<span class="ctrl">
-				Ctrl →
-			</span>
-		</xsl:if>
 
 		<!-- Filter String -->
 <!-- <xsl:variable name="filter"><xsl:if test="/shop/filter/node()">?filter=1&amp;sorting=<xsl:value-of select="/shop/sorting"/>&amp;price_from=<xsl:value-of select="/shop/price_from"/>&amp;price_to=<xsl:value-of select="/shop/price_to"/><xsl:for-each select="/shop/*"><xsl:if test="starts-with(name(), 'property_')">&amp;<xsl:value-of select="name()"/>[]=<xsl:value-of select="."/></xsl:if></xsl:for-each></xsl:if></xsl:variable> -->
@@ -560,39 +570,62 @@
 		<xsl:variable name="number_link"><xsl:if test="$i != 0">page-<xsl:value-of select="$i + 1"/>/</xsl:if></xsl:variable>
 
 			<!-- First pagination item -->
-			<xsl:if test="$page - $pre_count_page &gt; 0 and $i = $start_page">
+			<!--<xsl:if test="$page - $pre_count_page &gt; 0 and $i = $start_page">
 				<a href="{$group_link}{$filter}{$tag_path}{$shop_producer_path}{$on_page}" class="page_link" style="text-decoration: none;">←</a>
+			</xsl:if>-->
+
+
+
+		<xsl:if test="$page  &gt; 0 and $i = $start_page">
+				<xsl:variable name="prev_number_link">
+					<xsl:choose>
+						<!-- Если не нулевой уровень -->
+						<xsl:when test="$page &gt; 1">page-<xsl:value-of select="$page"/>/</xsl:when>
+						<!-- Иначе если нулевой уровень - просто ссылка на страницу со списком элементов -->
+						<xsl:otherwise></xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+
+				<li>
+<a class="prev page-numbers" href="{$group_link}{$filter}{$prev_number_link}{$tag_path}{$shop_producer_path}{$on_page}" id="id_prev">
+<span class="fa fa-angle-double-left"></span>
+</a>
+</li>
 			</xsl:if>
+
+
+
+
 
 			<!-- Pagination item -->
 			<xsl:if test="$i != $page">
 				<xsl:if test="($page - $pre_count_page) &lt;= $i and $i &lt; $n">
 					<!-- Pagination item -->
-					<a href="{$group_link}{$filter}{$tag_path}{$number_link}{$shop_producer_path}{$on_page}" class="page_link">
+					<li><a class="page-numbers" href="{$group_link}{$filter}{$tag_path}{$number_link}{$shop_producer_path}{$on_page}">
 						<xsl:value-of select="$i + 1"/>
-					</a>
+					</a></li>
 				</xsl:if>
 
 				<!-- Last pagination item -->
-				<xsl:if test="$i+1 &gt;= ($page + $post_count_page + 1) and $n &gt; ($page + 1 + $post_count_page)">
-					<!-- Last pagination item -->
+				<!--<xsl:if test="$i+1 &gt;= ($page + $post_count_page + 1) and $n &gt; ($page + 1 + $post_count_page)">
 					<a href="{$group_link}{$filter}page-{$n}/{$tag_path}{$shop_producer_path}{$on_page}" class="page_link" style="text-decoration: none;">→</a>
-				</xsl:if>
+				</xsl:if>-->
+			
+			<!-- Выводим ссылку плюс -->
+		<xsl:if test="$i+1 &gt;= ($page + $post_count_page + 1)">
+				<li>
+				<a class="next page-numbers" href="{$group_link}page-{$page+2}/{$tag_path}">
+				<span class="fa fa-angle-double-right"></span></a>
+				</li>
+
 			</xsl:if>
-
-			<!-- Ctrl+left link -->
-<xsl:if test="$page != 0 and $i = $page"><xsl:variable name="prev_number_link"><xsl:if test="$page &gt; 1">page-<xsl:value-of select="$i"/>/</xsl:if></xsl:variable><a href="{$group_link}{$filter}{$prev_number_link}{$tag_path}{$shop_producer_path}{$on_page}" id="id_prev"></a></xsl:if>
-
-			<!-- Ctrl+right link -->
-			<xsl:if test="($n - 1) > $page and $i = $page">
-				<a href="{$group_link}{$filter}page-{$page+2}/{$tag_path}{$shop_producer_path}{$on_page}" id="id_next"></a>
 			</xsl:if>
 
 			<!-- Current pagination item -->
 			<xsl:if test="$i = $page">
-				<span class="current">
+				<li><span class="page-numbers current">
 					<xsl:value-of select="$i+1"/>
-				</span>
+				</span></li>
 			</xsl:if>
 
 			<!-- Recursive Template -->

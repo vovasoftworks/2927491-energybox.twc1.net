@@ -31,7 +31,7 @@
 			</xsl:choose>
 		</xsl:variable>
 		
-	<span><xsl:text> → </xsl:text></span>
+	<span><xsl:text>&#xA0;&#8260;&#xA0;</xsl:text></span>
 		
 		<!-- Показывать ссылку? -->
 		<xsl:choose>
