@@ -109,6 +109,12 @@ ul.products > .product{
 .woocommerce-loop-product__title{
     font-family: 'DIN Pro' !important;
     font-size: 16px !important;
+    font-weight: 400 !important;
+    text-transform:none !important;
+}
+
+.woocommerce-Price-amount.amount{
+    font-size: 18px;
 }
 
 .woocommerce-products-header{

@@ -8,7 +8,7 @@ return array (
 	'datePickerFormat' => 'DD.MM.YYYY',
 	'dateTimePickerFormat' => 'DD.MM.YYYY HH:mm:ss',
 	'timezone' => 'Europe/Moscow',
-	'translate' => TRUE,
+	'translate' => false,
 	'chat' => TRUE,
 	'switchSelectToAutocomplete' => 100,
 	'autocompleteItems' => 10,
