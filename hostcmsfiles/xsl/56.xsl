@@ -11,21 +11,193 @@
 	<xsl:decimal-format name="my" decimal-separator="," grouping-separator=" "/>
 
 	<xsl:template match="/shop">
-		<xsl:apply-templates select="shop_item"/>
+
+<style>
+#theme-page-header .page-header, #theme-page-header .no-page-brecbrumd {
+background-color: #f6f6f6;
+}
+
+.single-gallery-slider .single-product-gallery {
+position: relative;
+min-height: 1px;
+float: left;
+}
+
+@media (min-width: 1200px){
+.single-gallery-slider.single-gallery-horizontal .single-product-gallery {
+width: 600px;
+}
+}
+
+</style>
+
+<div class="single-product single-gallery-slider single-gallery-horizontal">
+<div class="shop-container container with-full-sidebar has-flexible-sidebar">
+		<div class="shop-content">
+		
+			<xsl:apply-templates select="shop_item"/>		
+			
+
+		
+			</div>
+				</div>
+</div>
+
+
+		
 
 		<!-- Есть просмотренные товары -->
-		<xsl:if test="viewed/shop_item">
-			<p class="h1 red">&labelViewedItems;</p>
-			<div class="shop_block">
-				<div class="shop_table">
-					<!-- Выводим товары магазина -->
-					<xsl:apply-templates select="viewed/shop_item[position() &lt; 4]" mode="view"/>
-				</div>
-			</div>
-		</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="shop_item">
+
+
+<div class="woocommerce-notices-wrapper"></div>
+			<div id="product-319" class="product type-product post-319 status-publish first instock product_cat-service-kits product_cat-suspension product_cat-trending product_tag-bmw product_tag-car has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+
+			<div class="wrapper-product-content">
+		
+			<!--<span class="onsale">
+			Sale !		</span>-->
+		
+		<div class="single-product-gallery pro-single-image">
+				<div class="pro-carousel-image">
+
+			<xsl:variable name="imgPath">
+			<xsl:choose>
+				<xsl:when test="image_large!=''">
+				<xsl:value-of select="dir" /><xsl:value-of select="image_small" />
+				</xsl:when>
+				<xsl:otherwise>
+				/assets/wp-content/uploads/no-image.png
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+
+	<img src="{$imgPath}" class="loaded tns-complete" />			
+			
+		</div>
+
+							<!--<div class="pro-carousel-thumb">
+				<div class="tns-outer" id="gallery-thumb-ow"><div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">1 to 2</span>  of 2</div>
+				<div id="gallery-thumb-mw" class="tns-ovh"><div class="tns-inner" id="gallery-thumb-iw"><div class="tns-outer" id="gallery-thumb-ow"><div class="tns-controls" aria-label="Carousel Navigation" tabindex="0" style="display: none;"><button data-controls="prev" tabindex="-1" aria-controls="gallery-thumb">prev</button><button data-controls="next" tabindex="-1" aria-controls="gallery-thumb">next</button></div><div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">1 to 2</span>  of 2</div><div id="gallery-thumb-mw" class="tns-ovh"><div class="tns-inner" id="gallery-thumb-iw"><div id="gallery-thumb" class="  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" style="transition-duration: 0s; transform: translate3d(0%, 0px, 0px);" aria-label="Carousel Pagination">
+					<div class="pro-thumb tns-item tns-slide-active tns-nav-active" id="gallery-thumb-item0" data-nav="0" aria-label="Carousel Page 1 (Current Slide)" aria-controls="gallery-image">
+						<img src="http://apar/wp-content/uploads/2020/06/pngwing-1-150x150.jpg" alt="Product image" />
+					</div>
+
+											<div class="pro-thumb tns-item tns-slide-active" id="gallery-thumb-item1" data-nav="1" tabindex="-1" aria-label="Carousel Page 2" aria-controls="gallery-image">
+							<img src="http://apar/wp-content/uploads/2020/06/tire-6-150x150.jpg" alt="Product image" />
+						</div>
+									</div></div></div></div></div></div></div>
+			</div>-->
+				</div>
+	
+	
+	
+	<div class="summary entry-summary">
+		<h1 class="product_title entry-title"><xsl:value-of select="name"/></h1>
+	<div class="woocommerce-product-rating">
+		<div class="star-rating" role="img" aria-label="Оценка 3.00 из 5"><span style="width:60%">Рейтинг <strong class="rating">3.00</strong> из 5 на основе опроса <span class="rating">1</span> пользователя</span></div>								<a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<span class="count">1</span> отзыв клиента)</a>
+						</div>
+
+<p class="price"><span class="woocs_price_code" data-product-id="319"><del><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>397.90</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>350.90</bdi></span></ins></span></p>
+<div class="woocommerce-product-details__short-description"></div>
+
+	
+	<form class="cart" action="http://apar/product/horrison/" method="post" enctype="multipart/form-data">
+		
+			<div class="quantity"><span class="modify-qty" data-click="minus"></span>
+				<label class="screen-reader-text" for="quantity_60788ea74069a">Количество Horrison</label>
+		<input type="number" id="quantity_60788ea74069a" class="input-text qty text" step="1" min="1" max="80" name="quantity" value="1" title="Кол-во" size="4" placeholder="" inputmode="numeric" />
+			<span class="modify-qty" data-click="plus"></span></div>
+	
+		<button type="submit" name="add-to-cart" value="319" class="single_add_to_cart_button button alt">В корзину</button>
+
+
+	<input class="in-cart-qty" type="hidden" value="0" data-in_stock="no" data-out_of_stock="You cannot add that amount to the cart - we have  in stock and you already have  in your cart" data-valid_qty="Please enter a valid quantity for this product" data-not_enough="You cannot add that amount of this product to the cart because there is not enough stock." />
+	<div class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart tinvwl-loop-button-wrapper" data-product_id="319">
+	<div class="tinv-wishlist-clear"></div><a role="button" aria-label="Add to Wishlist" class="tinvwl_add_to_wishlist_button tinvwl-icon-heart  tinvwl-position-after tinvwl-loop" data-tinv-wl-list="[]" data-tinv-wl-product="319" data-tinv-wl-productvariation="0" data-tinv-wl-productvariations="[0]" data-tinv-wl-producttype="simple" data-tinv-wl-action="add"><span class="tinvwl_add_to_wishlist-text">Add to Wishlist</span></a><div class="tinv-wishlist-clear"></div>		<div class="tinvwl-tooltip">Add to Wishlist</div>
+</div>
+	</form>
+
+	
+	<div class="product_meta">
+				
+		<span class="posted_in meta_detail">
+		<strong><xsl:value-of select="../shop_item_properties/property[@id=113]/name"/>:&#xA0;</strong> 
+		<xsl:value-of select="property_value[property_id=113]/value"/>
+		</span>
+		
+		<span class="posted_in meta_detail">
+		<strong><xsl:value-of select="../shop_item_properties/property[@id=114]/name"/>:&#xA0;</strong> 
+		<xsl:value-of select="property_value[property_id=114]/value"/>
+		</span>
+
+		<span class="posted_in meta_detail">
+		<strong><xsl:value-of select="../shop_item_properties/property[@id=115]/name"/>:&#xA0;</strong> 
+		<xsl:value-of select="property_value[property_id=115]/value"/>
+		</span>
+
+		<span class="posted_in meta_detail">
+		<strong><xsl:value-of select="../shop_item_properties/property[@id=116]/name"/>:&#xA0;</strong> 
+		<xsl:value-of select="property_value[property_id=116]/value"/>
+		</span>
+
+<span class="posted_in meta_detail">
+		<strong><xsl:value-of select="../shop_item_properties/property[@id=117]/name"/>:&#xA0;</strong> 
+		<xsl:value-of select="property_value[property_id=117]/value"/>
+		</span>
+
+	</div>
+		</div>
+
+			</div>
+		
+	<div class="woocommerce-tabs wc-tabs-wrapper">
+		<ul class="tabs wc-tabs" role="tablist">
+							<li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
+					<a href="#tab-description">
+						Описание					</a>
+				</li>
+							<li class="additional_information_tab" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
+					<a href="#tab-additional_information">
+						Характеристики					</a>
+				</li>
+			
+		
+	
+					</ul>
+		
+		
+		<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description" style="display: block;">
+			<xsl:value-of disable-output-escaping="yes" select="text" />	
+			</div>
+					<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information" style="display: none;">
+				
+
+<table class="woocommerce-product-attributes shop_attributes">
+			<tbody><tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--weight">
+			<th class="woocommerce-product-attributes-item__label">Вес</th>
+			<td class="woocommerce-product-attributes-item__value">1.5 kg</td>
+		</tr>
+			<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--dimensions">
+			<th class="woocommerce-product-attributes-item__label">Габариты</th>
+			<td class="woocommerce-product-attributes-item__value">35 × 200 × 230 cm</td>
+		</tr>
+	</tbody></table>
+			</div>
+
+
+		
+			</div>
+
+
+	</div>
+
+
+
+
+
 
 		<h1 hostcms:id="{@id}" hostcms:field="name" hostcms:entity="shop_item"><xsl:value-of select="name"/></h1>
 
