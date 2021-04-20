@@ -110,7 +110,7 @@
 
  	<div class="widget-area shop-sidebar">
 		<form method="get" action="{$path}{$form_tag_url}">
-		<xsl:if test="1=0">
+		<xsl:if test="1=1">
 					<div class="shop_filter">
 						<div class="sorting">
 							<select name="sorting" onchange="$(this).parents('form:first').submit()">

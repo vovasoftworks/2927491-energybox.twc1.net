@@ -1,6 +1,6 @@
 <?php
 
 return array (
-	'hostcms' => 3602775533,
-	'integration' => 0
+	'hostcms' => 3736198637,
+	'integration' => 3
 );
