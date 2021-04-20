@@ -21,23 +21,7 @@ require_once('bootstrap.php');
 Core_Event::attach('Core_DataBase.onBeforeQuery', array('Core_Database_Observer', 'onBeforeQuery'));
 Core_Event::attach('Core_DataBase.onAfterQuery', array('Core_Database_Observer', 'onAfterQuery'));
 
-if (!((~Core::convert64b32(Core_Array::get(Core::$config->get('core_hostcms'), 'hostcms'))) & (~1835217467)))
-{
-	$oSite = Core_Entity::factory('Site');
-	$oSite->queryBuilder()
-		->where('active', '=', 1);
-	$count = $oSite->getCount();
 
-	if ($count > 2)
-	{
-		Core_Router::add('sitecount', '()')
-			->controller('Core_Command_Controller_Sitecount')
-			->execute()
-			->header('X-Powered-By', Core::xPoweredBy())
-			->sendHeaders()->showBody();
-		exit();
-	}
-}
 
 // XSLT not found
 if (!function_exists('xslt_create')
@@ -53,23 +37,7 @@ if (!function_exists('xslt_create')
 	exit();
 }
 
-if (!((~Core::convert64b32(Core_Array::get(Core::$config->get('core_hostcms'), 'hostcms'))) & (~2983120818)))
-{
-	$oSite = Core_Entity::factory('Site');
-	$oSite->queryBuilder()
-		->where('active', '=', 1);
-	$count = $oSite->getCount();
 
-	if ($count > 1)
-	{
-		Core_Router::add('sitecount', '()')
-			->controller('Core_Command_Controller_Sitecount')
-			->execute()
-			->header('X-Powered-By', Core::xPoweredBy())
-			->sendHeaders()->showBody();
-		exit();
-	}
-}
 
 Core::parseUrl();
 
@@ -91,30 +59,7 @@ $oSite = $oSite_Alias->Site;
 define('CURRENT_SITE', $oSite->id);
 Core::initConstants($oSite);
 
-$d = explode('.', Core::$url['host']);
-$e = $oSite->getKeys();
-do {
-	$b = implode('.', $d);
 
-	foreach ($e as $sKey)
-	{
-		$a = explode('-', $sKey) + array(0, 0, 0, 0);
-
-		strlen($a[2]) == 8 && strlen($a[3]) == 8 && !(Core::convert64b32(Core::convert64b32(hexdec($a[3])) ^ abs(Core::crc32($b))) ^ ~(Core::convert64b32(Core_Array::get(Core::$config->get('core_hostcms'), 'hostcms')) & abs(Core::crc32($b)) ^ Core::convert64b32(hexdec($a[2])))) && Core::$url['key'] = $sKey;
-	}
-	array_shift($d);
-} while(count($d) > 1);
-
-if (((~Core::convert64b32(Core_Array::get(Core::$config->get('core_hostcms'), 'hostcms'))) & 1176341605) && !Core_Array::get(Core::$url, 'key'))
-{
-	Core_Router::add('key_not_found', '()')
-		->controller('Core_Command_Controller_Key_Not_Found')
-		->execute()
-		->header('X-Powered-By', Core::xPoweredBy())
-		->sendHeaders()->showBody();
-
-	exit();
-}
 
 Core_Router::add('robots.txt', '/robots.txt')
 	->controller('Core_Command_Controller_Robots');
