@@ -12,6 +12,13 @@
 
 	<xsl:template match="/shop">
 
+<script type='text/javascript' id='wc-single-product-js-extra'>
+/* <![CDATA[ */
+var wc_single_product_params = {"tabs_enabled":"1"};
+/* ]]> */
+</script>
+
+
 <style>
 #theme-page-header .page-header, #theme-page-header .no-page-brecbrumd {
 background-color: #f6f6f6;
@@ -28,8 +35,13 @@ float: left;
 width: 600px;
 }
 }
-
 </style>
+
+
+
+
+
+
 
 <div class="single-product single-gallery-slider single-gallery-horizontal">
 <div class="shop-container container with-full-sidebar has-flexible-sidebar">
@@ -46,7 +58,7 @@ width: 600px;
 
 		
 
-		<!-- Есть просмотренные товары -->
+<script type='text/javascript' src='/assets/wp-content/plugins/woocommerce/assets/js/frontend/single-product.js?ver=5.2.2' id='wc-single-product-js'></script>
 	</xsl:template>
 
 	<xsl:template match="shop_item">
@@ -96,28 +108,45 @@ width: 600px;
 	
 	<div class="summary entry-summary">
 		<h1 class="product_title entry-title"><xsl:value-of select="name"/></h1>
-	<div class="woocommerce-product-rating">
-		<div class="star-rating" role="img" aria-label="Оценка 3.00 из 5"><span style="width:60%">Рейтинг <strong class="rating">3.00</strong> из 5 на основе опроса <span class="rating">1</span> пользователя</span></div>								<a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<span class="count">1</span> отзыв клиента)</a>
-						</div>
 
-<p class="price"><span class="woocs_price_code" data-product-id="319"><del><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>397.90</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>350.90</bdi></span></ins></span></p>
+
+
+
+		<p class="price">
+			<span class="woocs_price_code" data-product-id="319">
+			<xsl:if test="price != 0">
+				<xsl:if test="discount != 0">
+				<del>
+				<span class="woocommerce-Price-amount amount">
+				<bdi><xsl:value-of select="format-number(price + discount, '### ##0', 'my')"/><xsl:text> </xsl:text><span class="woocommerce-Price-currencySymbol"><xsl:value-of select="currency" /></span></bdi>
+				</span>
+				</del>
+				</xsl:if>
+				
+				<ins>
+				<span class="woocommerce-Price-amount amount">
+				<bdi><xsl:value-of select="format-number(price, '### ##0', 'my')"/><xsl:text> </xsl:text><span class="woocommerce-Price-currencySymbol"><xsl:value-of select="currency"/></span></bdi>
+				</span>
+				</ins>
+			</xsl:if>
+			</span>
+			
+		</p>
 <div class="woocommerce-product-details__short-description"></div>
 
 	
-	<form class="cart" action="http://apar/product/horrison/" method="post" enctype="multipart/form-data">
+	<form class="cart" action="" method="post" enctype="multipart/form-data">
 		
 			<div class="quantity"><span class="modify-qty" data-click="minus"></span>
-				<label class="screen-reader-text" for="quantity_60788ea74069a">Количество Horrison</label>
+				<label class="screen-reader-text" for="quantity_60788ea74069a">Количество</label>
 		<input type="number" id="quantity_60788ea74069a" class="input-text qty text" step="1" min="1" max="80" name="quantity" value="1" title="Кол-во" size="4" placeholder="" inputmode="numeric" />
 			<span class="modify-qty" data-click="plus"></span></div>
 	
-		<button type="submit" name="add-to-cart" value="319" class="single_add_to_cart_button button alt">В корзину</button>
+		<button type="button" onclick="return $.addIntoCart('{/shop/url}cart/', {@id}, 1)" name="add-to-cart" value="319" class="single_add_to_cart_button button alt">В корзину</button>
 
 
-	<input class="in-cart-qty" type="hidden" value="0" data-in_stock="no" data-out_of_stock="You cannot add that amount to the cart - we have  in stock and you already have  in your cart" data-valid_qty="Please enter a valid quantity for this product" data-not_enough="You cannot add that amount of this product to the cart because there is not enough stock." />
-	<div class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart tinvwl-loop-button-wrapper" data-product_id="319">
-	<div class="tinv-wishlist-clear"></div><a role="button" aria-label="Add to Wishlist" class="tinvwl_add_to_wishlist_button tinvwl-icon-heart  tinvwl-position-after tinvwl-loop" data-tinv-wl-list="[]" data-tinv-wl-product="319" data-tinv-wl-productvariation="0" data-tinv-wl-productvariations="[0]" data-tinv-wl-producttype="simple" data-tinv-wl-action="add"><span class="tinvwl_add_to_wishlist-text">Add to Wishlist</span></a><div class="tinv-wishlist-clear"></div>		<div class="tinvwl-tooltip">Add to Wishlist</div>
-</div>
+	<input class="in-cart-qty" type="hidden" value="0" data-in_stock="no" />
+	
 	</form>
 
 	
@@ -173,18 +202,17 @@ width: 600px;
 			<xsl:value-of disable-output-escaping="yes" select="text" />	
 			</div>
 					<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information" style="display: none;">
-				
 
-<table class="woocommerce-product-attributes shop_attributes">
-			<tbody><tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--weight">
-			<th class="woocommerce-product-attributes-item__label">Вес</th>
-			<td class="woocommerce-product-attributes-item__value">1.5 kg</td>
-		</tr>
-			<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--dimensions">
-			<th class="woocommerce-product-attributes-item__label">Габариты</th>
-			<td class="woocommerce-product-attributes-item__value">35 × 200 × 230 cm</td>
-		</tr>
-	</tbody></table>
+
+
+		<xsl:if test="count(property_value)">
+				<table class="woocommerce-product-attributes shop_attributes">
+			<tbody>
+				<xsl:apply-templates select="property_value"/>
+			</tbody></table>
+			</xsl:if>			
+
+	
 			</div>
 
 
@@ -195,240 +223,6 @@ width: 600px;
 	</div>
 
 
-
-
-
-
-		<h1 hostcms:id="{@id}" hostcms:field="name" hostcms:entity="shop_item"><xsl:value-of select="name"/></h1>
-
-		<!-- Store parent id in a variable -->
-		<xsl:variable name="group" select="/shop/group"/>
-
-		<p>
-			<xsl:if test="$group = 0">
-				<a href="{/shop/url}" hostcms:id="{/shop/@id}" hostcms:field="name" hostcms:entity="shop">
-					<xsl:value-of select="/shop/name"/>
-				</a>
-			</xsl:if>
-
-			<!-- Breadcrumbs -->
-			<xsl:apply-templates select="/shop//shop_group[@id=$group]" mode="breadCrumbs"/>
-
-			<!-- Если модификация, выводим в пути родительский товар -->
-			<xsl:if test="shop_item/node()">
-			<span><xsl:text> → </xsl:text></span>
-				<a href="{shop_item/url}">
-					<xsl:value-of disable-output-escaping="yes" select="shop_item/name"/>
-				</a>
-			</xsl:if>
-
-		<span><xsl:text> → </xsl:text></span>
-
-		<b><a href="{url}" hostcms:id="{@id}" hostcms:field="name" hostcms:entity="shop_item"><xsl:value-of select="name"/></a></b>
-		</p>
-
-		<!-- Show Message -->
-		<xsl:if test="/shop/message/node()">
-			<xsl:value-of disable-output-escaping="yes" select="/shop/message"/>
-		</xsl:if>
-
-		<div>
-			<!-- Изображение для товара, если есть -->
-			<xsl:if test="image_small != ''">
-				<div id="gallery" class="shop_img">
-					<a href="{dir}{image_large}" target="_blank"><img src="{dir}{image_small}" /></a>
-				</div>
-			</xsl:if>
-
-			<!-- Цена товара -->
-			<xsl:if test="price != 0">
-				<div class="price">
-				<xsl:value-of select="format-number(price, '### ##0,00', 'my')"/><xsl:text> </xsl:text><xsl:value-of select="currency"/><xsl:text> </xsl:text>
-
-					<!-- Если цена со скидкой - выводим ее -->
-					<xsl:if test="discount != 0">
-						<span class="oldPrice">
-							<xsl:value-of select="format-number(price + discount, '### ##0,00', 'my')"/><xsl:text> </xsl:text><xsl:value-of select="currency" />
-					</span><xsl:text> </xsl:text>
-					</xsl:if>
-
-					<!-- Ссылку на добавление в корзины выводим, если:
-					type = 0 - простой тип товара
-					type = 1 - электронный товар, при этом остаток на складе больше 0 или -1,
-					что означает неограниченное количество -->
-					<xsl:if test="type != 1 or digitals > 0 or digitals = -1">
-						<a href="{/shop/url}cart/?add={@id}" onclick="return $.addIntoCart('{/shop/url}cart/', {@id}, 1)">
-							<img src="/images/add_to_cart.gif" alt="&labelAddIntoCart;" title="&labelAddIntoCart;" />
-						</a>
-					</xsl:if>
-				</div>
-			</xsl:if>
-
-			<!-- Cкидки -->
-			<xsl:if test="count(shop_discount)">
-				<xsl:apply-templates select="shop_discount"/>
-			</xsl:if>
-
-			<xsl:if test="marking != ''">
-			<div class="shop_property">&labelMarking; <span hostcms:id="{@id}" hostcms:field="marking" hostcms:entity="shop_item"><xsl:value-of select="marking"/></span></div>
-			</xsl:if>
-
-			<xsl:if test="shop_producer/node()">
-			<div class="shop_property">&labelProducer; <span><xsl:value-of select="shop_producer/name"/></span></div>
-			</xsl:if>
-
-			<!-- Если указан вес товара -->
-			<xsl:if test="weight != 0">
-	<div class="shop_property">&labelWeight; <span hostcms:id="{@id}" hostcms:field="weight" hostcms:entity="shop_item"><xsl:value-of select="weight"/></span><xsl:text> </xsl:text><span><xsl:value-of select="/shop/shop_measure/name"/></span></div>
-			</xsl:if>
-
-			<!-- Количество на складе для не электронного товара -->
-			<xsl:if test="rest &gt; 0 and type != 1">
-<div class="shop_property">&labelRest; <span><xsl:value-of select="rest - reserved"/><xsl:text> </xsl:text><xsl:value-of select="shop_measure/name"/></span><xsl:if test="reserved &gt; 0"> (&labelReserve; <span><xsl:value-of select="reserved"/><xsl:text> </xsl:text><xsl:value-of select="shop_measure/name"/></span>)</xsl:if></div>
-			</xsl:if>
-
-			<!-- Если электронный товар, выведим доступное количество -->
-			<xsl:if test="type = 1">
-				<div class="shop_property">
-					<xsl:choose>
-						<xsl:when test="digitals = 0">
-							&labelDigital0;
-						</xsl:when>
-						<xsl:when test="digitals = -1">
-							&labelDigital1;
-						</xsl:when>
-						<xsl:otherwise>
-					&labelWarehouseRest; <span><xsl:value-of select="digitals" /><xsl:text> </xsl:text><xsl:value-of select="shop_measure/name" /></span>
-						</xsl:otherwise>
-					</xsl:choose>
-				</div>
-			</xsl:if>
-
-			<div style="clear: both;"></div>
-
-			<!-- Описание товара -->
-			<xsl:if test="description != ''">
-				<div hostcms:id="{@id}" hostcms:field="description" hostcms:entity="shop_item" hostcms:type="wysiwyg"><xsl:value-of disable-output-escaping="yes" select="description" /></div>
-			</xsl:if>
-
-			<!-- Текст товара -->
-			<xsl:if test="text != ''">
-				<div hostcms:id="{@id}" hostcms:field="text" hostcms:entity="shop_item" hostcms:type="wysiwyg"><xsl:value-of disable-output-escaping="yes" select="text"/></div>
-			</xsl:if>
-
-			<!-- Размеры товара -->
-			<xsl:if test="length != 0 or width != 0 or height != 0">
-				<div class="shop_property">&labelSizes; <span><xsl:value-of select="length" /><xsl:text> </xsl:text><xsl:value-of select="/shop/size_measure/name" />
-						<xsl:text> × </xsl:text>
-						<xsl:value-of select="width" /><xsl:text> </xsl:text><xsl:value-of select="/shop/size_measure/name" />
-						<xsl:text> × </xsl:text>
-				<xsl:value-of select="height" /><xsl:text> </xsl:text><xsl:value-of select="/shop/size_measure/name" /></span></div>
-			</xsl:if>
-
-			<xsl:if test="count(property_value)">
-				<h2>&labelAttributes;</h2>
-				<xsl:apply-templates select="property_value"/>
-			</xsl:if>
-		</div>
-
-		<!-- Модификации -->
-		<xsl:if test="count(modifications/shop_item) &gt; 0">
-			<p class="h2">&labelModifiations; <xsl:value-of select="name"/></p>
-			<ul class="shop_list">
-				<xsl:apply-templates select="modifications/shop_item"/>
-			</ul>
-		</xsl:if>
-
-		<xsl:if test="count(associated/shop_item) &gt; 0">
-			<p class="h2">&labelTying; <xsl:value-of select="name"/></p>
-			<ul class="shop_list">
-				<xsl:apply-templates select="associated/shop_item"/>
-			</ul>
-		</xsl:if>
-
-		<p class="tags">
-			<!-- Average Grade -->
-			<xsl:if test="comments_average_grade/node() and comments_average_grade != 0">
-				<span><xsl:call-template name="show_average_grade">
-						<xsl:with-param name="grade" select="comments_average_grade"/>
-					<xsl:with-param name="const_grade" select="5"/></xsl:call-template></span>
-			</xsl:if>
-
-			<!-- Processing of the selected tag -->
-			<xsl:if test="count(tag)">
-				<img src="/images/tag.png" /><span><xsl:apply-templates select="tag"/></span>
-			</xsl:if>
-
-			<xsl:if test="count(siteuser) &gt; 0">
-			<img src="/images/user.png" /><span><a href="/users/info/{siteuser/path}/"><xsl:value-of select="siteuser/login"/></a></span>
-			</xsl:if>
-
-			<xsl:if test="rate/node()">
-				<span id="shop_item_id_{@id}" class="thumbs">
-					<xsl:choose>
-						<xsl:when test="/shop/siteuser_id > 0">
-							<xsl:choose>
-								<xsl:when test="vote/value = 1">
-									<xsl:attribute name="class">thumbs up</xsl:attribute>
-								</xsl:when>
-								<xsl:when test="vote/value = -1">
-									<xsl:attribute name="class">thumbs down</xsl:attribute>
-								</xsl:when>
-							</xsl:choose>
-							<span id="shop_item_likes_{@id}"><xsl:value-of select="rate/@likes" /></span>
-							<span class="inner_thumbs">
-								<a onclick="return $.sendVote({@id}, 1, 'shop_item')" href="{/shop/url}?id={@id}&amp;vote=1&amp;entity_type=shop_item" alt="&labelLike;"></a>
-								<span class="rate" id="shop_item_rate_{@id}"><xsl:value-of select="rate" /></span>
-								<a onclick="return $.sendVote({@id}, 0, 'shop_item')" href="{/shop/url}?id={@id}&amp;vote=0&amp;entity_type=shop_item" alt="&labelDislike;"></a>
-							</span>
-							<span id="shop_item_dislikes_{@id}"><xsl:value-of select="rate/@dislikes" /></span>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:attribute name="class">thumbs inactive</xsl:attribute>
-							<span id="shop_item_likes_{@id}"><xsl:value-of select="rate/@likes" /></span>
-							<span class="inner_thumbs">
-								<a alt="&labelLike;"></a>
-								<span class="rate" id="shop_item_rate_{@id}"><xsl:value-of select="rate" /></span>
-								<a alt="&labelDislike;"></a>
-							</span>
-							<span id="shop_item_dislikes_{@id}"><xsl:value-of select="rate/@dislikes" /></span>
-						</xsl:otherwise>
-					</xsl:choose>
-				</span>
-			</xsl:if>
-
-			<!-- Date -->
-			<img src="/images/calendar.png" /> <xsl:value-of select="date"/>, <span hostcms:id="{@id}" hostcms:field="showed" hostcms:entity="shop_item"><xsl:value-of select="showed"/></span>
-			<xsl:text> </xsl:text>
-			<xsl:call-template name="declension">
-				<xsl:with-param name="number" select="showed"/>
-		</xsl:call-template><xsl:text>. </xsl:text>
-		</p>
-
-
-		<xsl:if test="/shop/show_comments/node() and /shop/show_comments = 1">
-
-			<!-- Show Reviews -->
-			<xsl:if test="count(comment)">
-			<p class="h1"><a name="comments"></a>&labelReviews;</p>
-				<xsl:apply-templates select="comment"/>
-			</xsl:if>
-		</xsl:if>
-
-		<!-- If allowed to display add comment form,
-		1 - Only authorized
-		2 - All
-		-->
-		<xsl:if test="/shop/show_add_comments/node() and ((/shop/show_add_comments = 1 and /shop/siteuser_id &gt; 0)  or /shop/show_add_comments = 2)">
-
-			<p class="button" onclick="$('.comment_reply').hide('slow');$('#AddComment').toggle('slow')">
-				&labelAddReview;
-			</p>
-
-			<div id="AddComment" class="comment_reply">
-				<xsl:call-template name="AddCommentForm"></xsl:call-template>
-			</div>
-		</xsl:if>
 	</xsl:template>
 
 	<!-- Шаблон для товара просмотренные -->
@@ -494,13 +288,15 @@ width: 600px;
 
 	<!-- Show property item -->
 	<xsl:template match="property_value">
+	
 		<xsl:if test="value/node() and value != '' or file/node() and file != ''">
-			<div class="shop_property">
+			<tr class="woocommerce-product-attributes-item">
+
 				<xsl:variable name="property_id" select="property_id" />
 				<xsl:variable name="property" select="/shop/shop_item_properties//property[@id=$property_id]" />
 
-				<xsl:value-of select="$property/name"/><xsl:text>: </xsl:text>
-				<span><xsl:choose>
+				<th class="woocommerce-product-attributes-item__label"><xsl:value-of select="$property/name"/><xsl:text>: </xsl:text></th>
+				<td class="woocommerce-product-attributes-item__value"><xsl:choose>
 						<xsl:when test="$property/type = 2">
 							<a href="{../dir}{file}" target="_blank"><xsl:value-of select="file_name"/></a>
 						</xsl:when>
@@ -524,8 +320,8 @@ width: 600px;
 								<xsl:text> </xsl:text><xsl:value-of select="$property/shop_measure/name"/>
 							</xsl:if>
 						</xsl:otherwise>
-				</xsl:choose></span>
-			</div>
+				</xsl:choose></td>
+			</tr>
 		</xsl:if>
 	</xsl:template>
 

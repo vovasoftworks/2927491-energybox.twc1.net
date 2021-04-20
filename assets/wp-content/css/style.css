@@ -117,6 +117,22 @@ ul.products > .product{
     font-size: 18px;
 }
 
-.woocommerce-products-header{
+.woocommerce-products-header,
+.woocommerce-tabs .tabs a{
     font-family: 'DIN Pro' !important;
+}
+
+.summary .product_title{
+    font-family: 'DIN Pro' !important;
+    font-weight: 400;
+    font-size: 30px; 
+}
+
+.woocs_price_code{
+    font-family: 'DIN Pro' !important;
+}
+
+
+.shop_attributes{
+    width: 100%;
 }
