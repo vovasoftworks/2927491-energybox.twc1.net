@@ -136,3 +136,55 @@ ul.products > .product{
 .shop_attributes{
     width: 100%;
 }
+
+
+.filter-button:hover{
+    background-color: #fd8c71;
+}
+
+.filter-button{
+    background-color: #fc5a34;
+    display: inline-block;
+border: 0;
+color: #fff;
+padding: 10px 27px;
+
+font-size: 14px;
+border-radius: 3px;
+font-weight: bold;
+text-transform: uppercase;
+font-family: 'DIN Pro' !important;
+margin-left: auto;
+margin-right: auto;
+}
+
+.filter-button-wrapper{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ui-state-default, 
+.ui-widget-content 
+.ui-state-default, 
+.ui-widget-header 
+.ui-state-default, 
+.ui-button, html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active{
+    background-color: #fc5a34;
+    border:none;
+}
+
+.ui-widget.ui-widget-content{
+    border:none;
+    background-color: #f3f3f3;
+}
+
+
+.ui-slider-horizontal .ui-slider-range{
+    background-color: #fc5a34;
+    opacity:0.5;
+}
+
+.filterField{
+    margin-top: 15px;
+}

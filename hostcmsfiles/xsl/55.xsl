@@ -85,35 +85,10 @@
 		</xsl:if>
 
 </p>
-<form class="woocommerce-ordering" method="get">
-<select name="orderby" class="orderby" aria-label="Shop order">
-                <option value="menu_order" selected="selected">Default sorting</option>
-                <option value="popularity">Sort by popularity</option>
-                <option value="rating">Sort by average rating</option>
-                <option value="date">Sort by latest</option>
-                <option value="price">Sort by price: low to high</option>
-                <option value="price-desc">Sort by price: high to low</option>
-        </select>
-<input type="hidden" name="paged" value="1" />
-</form>
-</div>
+<form class="woocommerce-ordering" method="get" action="{$path}{$form_tag_url}">
 
-<ul class="products columns-4">
-						<!-- Выводим товары магазина -->
-						<xsl:apply-templates select="shop_item" />
-				</ul>
-
-	 </div>
-
-
-
-
- 	<div class="widget-area shop-sidebar">
-		<form method="get" action="{$path}{$form_tag_url}">
-		<xsl:if test="1=1">
-					<div class="shop_filter">
-						<div class="sorting">
-							<select name="sorting" onchange="$(this).parents('form:first').submit()">
+<div class="sorting">
+							<select class="orderby" name="sorting" onchange="$(this).parents('form:first').submit()">
 								<option>&labelSortBy;</option>
 								<option value="1">
 								<xsl:if test="/shop/sorting = 1"><xsl:attribute name="selected">selected</xsl:attribute></xsl:if>
@@ -130,21 +105,65 @@
 							</select>
 						</div>
 
-						<div class="priceFilter">
-							<xsl:text>&labelPriceFrom; </xsl:text>
-							<input name="price_from" size="5" type="text">
-								<xsl:if test="/shop/price_from != 0">
-									<xsl:attribute name="value"><xsl:value-of select="/shop/price_from"/></xsl:attribute>
-								</xsl:if>
-							</input>
 
-							<xsl:text>&labelPriceTo; </xsl:text>
-							<input name="price_to" size="5" type="text">
-								<xsl:if test="/shop/price_to != 0">
-									<xsl:attribute name="value"><xsl:value-of select="/shop/price_to"/></xsl:attribute>
-								</xsl:if>
-							</input>
-						</div>
+</form>
+</div>
+
+<ul class="products columns-4">
+						<!-- Выводим товары магазина -->
+						<xsl:apply-templates select="shop_item" />
+				</ul>
+
+	 </div>
+
+
+<link rel='stylesheet' href='/assets/wp-content/css/jquery-ui.min.css' type='text/css' media='all'/>
+
+ 	<div class="widget-area shop-sidebar">
+
+		<form method="get" action="{$path}{$form_tag_url}">
+		<xsl:if test="1=1">
+
+					<div class="shop_filter">
+						
+<div id="price-slider"></div>
+ 
+<div id="price-slider-range">
+	Цена от <span id="min">1000</span> до <span id="max">9000</span>
+</div>
+
+	<input name="price_from" id="slider-min-val" type="hidden">
+		<xsl:if test="/shop/price_from != 0">
+			<xsl:attribute name="value"><xsl:value-of select="/shop/price_from"/></xsl:attribute>
+		</xsl:if>
+	</input>
+
+	<input name="price_to" id="slider-max-val" type="hidden">
+		<xsl:if test="/shop/price_to != 0">
+			<xsl:attribute name="value"><xsl:value-of select="/shop/price_to"/></xsl:attribute>
+		</xsl:if>
+	</input>
+
+
+
+<script>
+
+ $(function(){
+	$('#price-slider').slider({
+		range: true,
+		min: 0,
+		max: 9999,
+		values: ['1000', '9000'],
+		slide: function(event, ui) {
+			$('#min').html(ui.values[0]);
+			$('#max').html(ui.values[1]);
+			$('#slider-min-val').val(ui.values[0]);
+			$('#slider-max-val').val(ui.values[1]);
+		}
+	});
+});
+</script>
+
 
 						<!-- Фильтр по дополнительным свойствам товара: -->
 						<xsl:if test="count(shop_item_properties//property[filter != 0 and (type = 0 or type = 1 or type = 3 or type = 7 or type = 11)])">
@@ -152,7 +171,9 @@
 							<xsl:apply-templates select="shop_item_properties//property[filter != 0 and (type = 0 or type = 1 or type = 3 or type = 7 or type = 11)]" mode="propertyList"/>
 						</xsl:if>
 
-						<input name="filter" class="button" value="&labelApply;" type="submit"/>
+						<div class="filter-button-wrapper">
+						<button type="submit" name="filter" class="filter-button">&labelApply;</button>
+						</div>
 					</div>
 				</xsl:if>
 				<!-- Filter String -->
@@ -420,7 +441,7 @@
 			<xsl:choose>
 				<!-- Отображаем поле ввода -->
 				<xsl:when test="filter = 1">
-					<br/>
+					
 					<input type="text" name="property_{@id}">
 						<xsl:if test="/shop/*[name()=$nodename] != ''">
 							<xsl:attribute name="value"><xsl:value-of select="/shop/*[name()=$nodename]"/></xsl:attribute>
@@ -429,7 +450,7 @@
 				</xsl:when>
 				<!-- Отображаем список -->
 				<xsl:when test="filter = 2">
-					<br/>
+					
 					<select name="property_{@id}">
 						<option value="0">...</option>
 						<xsl:apply-templates select="list/list_item"/>
@@ -437,7 +458,7 @@
 				</xsl:when>
 				<!-- Отображаем переключатели -->
 				<xsl:when test="filter = 3">
-					<br/>
+					
 					<div class="propertyInput">
 						<input type="radio" name="property_{@id}" value="0" id="id_prop_radio_{@id}_0"></input>
 						<label for="id_prop_radio_{@id}_0">&labelAnyOption;</label>
@@ -463,12 +484,12 @@
 				</xsl:when>
 				<!-- Отображение полей "от и до" -->
 				<xsl:when test="filter = 6">
-					<br/>
+					
 					&labelFrom; <input type="text" name="property_{@id}_from" size="2" value="{/shop/*[name()=$nodename_from]}"/> &labelTo; <input type="text" name="property_{@id}_to" size="2" value="{/shop/*[name()=$nodename_to]}"/>
 				</xsl:when>
 				<!-- Отображаем список с множественным выбором-->
 				<xsl:when test="filter = 7">
-					<br/>
+				
 					<select name="property_{@id}[]" multiple="multiple">
 						<xsl:apply-templates select="list/list_item"/>
 					</select>
@@ -489,7 +510,7 @@
 		<xsl:if test="../../filter = 3">
 			<!-- Отображаем переключатели -->
 			<xsl:variable name="nodename">property_<xsl:value-of select="../../@id"/></xsl:variable>
-			<br/>
+			
 			<input type="radio" name="property_{../../@id}" value="{@id}" id="id_property_{../../@id}_{@id}">
 				<xsl:if test="/shop/*[name()=$nodename] = @id">
 					<xsl:attribute name="checked">checked</xsl:attribute>
@@ -502,7 +523,7 @@
 		<xsl:if test="../../filter = 4">
 			<!-- Отображаем флажки -->
 			<xsl:variable name="nodename">property_<xsl:value-of select="../../@id"/></xsl:variable>
-			<br/>
+			
 			<input type="checkbox" value="{@id}" name="property_{../../@id}[]" id="property_{../../@id}_{@id}">
 				<xsl:if test="/shop/*[name()=$nodename] = @id">
 					<xsl:attribute name="checked">checked</xsl:attribute>
@@ -510,7 +531,7 @@
 				<label for="property_{../../@id}_{@id}">
 					<xsl:value-of disable-output-escaping="yes" select="value"/>
 				</label>
-			</input>
+			</input><br/>
 		</xsl:if>
 		<xsl:if test="../../filter = 7">
 			<!-- Отображаем список -->
