@@ -173,6 +173,7 @@
 
 						<div class="filter-button-wrapper">
 						<button type="submit" name="filter" class="filter-button">&labelApply;</button>
+						<input type="hidden" name="filter" value="1"/>
 						</div>
 					</div>
 				</xsl:if>
