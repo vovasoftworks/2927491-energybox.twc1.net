@@ -188,3 +188,20 @@ html .ui-button.ui-state-disabled:active{
 .filterField{
     margin-top: 15px;
 }
+
+.woocommerce-form__label.woocommerce-form__label-for-checkbox{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.woocommerce input[type="checkbox"] + span{
+    font-weight: 400;
+}
+
+.filterField legend{
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}

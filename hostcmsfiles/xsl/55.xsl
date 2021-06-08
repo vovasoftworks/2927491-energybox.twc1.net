@@ -125,6 +125,7 @@
 		<xsl:if test="1=1">
 
 					<div class="shop_filter">
+					<div class="woocommerce">
 						
 <div id="price-slider"></div>
  
@@ -175,6 +176,7 @@
 						<button type="submit" name="filter" class="filter-button">&labelApply;</button>
 						<input type="hidden" name="filter" value="1"/>
 						</div>
+					</div>
 					</div>
 				</xsl:if>
 				<!-- Filter String -->
@@ -525,14 +527,17 @@
 			<!-- Отображаем флажки -->
 			<xsl:variable name="nodename">property_<xsl:value-of select="../../@id"/></xsl:variable>
 			
-			<input type="checkbox" value="{@id}" name="property_{../../@id}[]" id="property_{../../@id}_{@id}">
+			<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+				<input style="display:none" id="property_{../../@id}_{@id}" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" type="checkbox" name="property_{../../@id}[]" value="{@id}">
 				<xsl:if test="/shop/*[name()=$nodename] = @id">
 					<xsl:attribute name="checked">checked</xsl:attribute>
 				</xsl:if>
-				<label for="property_{../../@id}_{@id}">
-					<xsl:value-of disable-output-escaping="yes" select="value"/>
-				</label>
-			</input><br/>
+				</input>
+				<span><xsl:value-of disable-output-escaping="yes" select="value"/></span>
+			</label>
+
+
+	
 		</xsl:if>
 		<xsl:if test="../../filter = 7">
 			<!-- Отображаем список -->
