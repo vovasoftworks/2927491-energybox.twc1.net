@@ -126,14 +126,19 @@
 
 					<div class="shop_filter">
 					<div class="woocommerce">
-						
-<div id="price-slider"></div>
- 
-<div id="price-slider-range">
-	Цена от <span id="min">1000</span> до <span id="max">9000</span>
-</div>
 
-	<input name="price_from" id="slider-min-val" type="hidden">
+
+
+<div id="price-slider-range">
+	<div class="filterField">
+	<legend>
+	Цена от <span id="min">1000</span> до <span id="max">9000</span>
+	</legend>
+	</div>
+</div>	
+
+<div id="price-slider"></div>
+ 	<input name="price_from" id="slider-min-val" type="hidden">
 		<xsl:if test="/shop/price_from != 0">
 			<xsl:attribute name="value"><xsl:value-of select="/shop/price_from"/></xsl:attribute>
 		</xsl:if>

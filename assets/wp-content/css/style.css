@@ -200,6 +200,10 @@ html .ui-button.ui-state-disabled:active{
     font-weight: 400;
 }
 
+.woocommerce input[type="checkbox"] + span:before{
+    width: 15px;
+}
+
 .filterField legend{
     margin-bottom: 5px;
     font-weight: 600;
