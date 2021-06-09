@@ -4,139 +4,18 @@ var woocs_sumbit_currency_changing = true;//just a flag variable for drop-down r
 
 jQuery(function ($) {
 
-    woocs_array_of_get = jQuery.parseJSON(woocs_array_of_get);
+ 
 
-    //wp-content\plugins\woocommerce\assets\js\frontend\cart.js
-    if (Object.keys(woocs_array_of_get).length !== 0) {
-        if ('currency' in woocs_array_of_get) {
-            //console.log('here');
-            //this code nessesary for correct redrawing of the shipping methods while currency changes on the cart page
-            $('body.woocommerce-cart .shop_table.cart').closest('form').find('input[name="update_cart"]').prop('disabled', false);
-            $('body.woocommerce-cart .shop_table.cart').closest('form').find('input[name="update_cart"]').trigger('click');
-        }
-    }
-
-    //keeps data of $_GET array
-
-    if (Object.keys(woocs_array_of_get).length == 0) {
-        woocs_array_of_get = {};
-    }
-
-    //***
-    woocs_array_no_cents = jQuery.parseJSON(woocs_array_no_cents);
-
-    //***
-
-    //emptying cart widget after checkout
-    if (!parseInt(woocs_get_cookie('woocommerce_items_in_cart'), 10)) {
-        $('.widget_shopping_cart_content').empty();
-        $(document.body).trigger('wc_fragment_refresh');
-    }
-
-    if (woocs_array_of_get.currency != undefined || woocs_array_of_get.removed_item != undefined || woocs_array_of_get.key != undefined)
-    {
-        woocs_refresh_mini_cart(555);
-    }
-    if (woocs_redraw_cart) {
-        //intercept adding to cart event to redraw mini-cart widget
-        jQuery(document).on("adding_to_cart", function () {
-            woocs_refresh_mini_cart(999);
-        });
-    }
 
     //to make price popup mobile friendly
     jQuery('body').on('click', '.woocs_price_info', function () {
         return false;
     });
 
-    //+++++++++++++++++++++++++++++++++++++++++++++++
-    //console.log(woocs_drop_down_view);
-    if (woocs_drop_down_view == 'chosen' || woocs_drop_down_view == 'chosen_dark') {
-        try {
-            if (jQuery("select.woocommerce-currency-switcher").length) {
-                jQuery("select.woocommerce-currency-switcher").chosen({
-                    disable_search_threshold: 10
-                });
-
-                jQuery.each(jQuery('.woocommerce-currency-switcher-form .chosen-container'), function (index, obj) {
-                    jQuery(obj).css({'width': jQuery(this).prev('select').data('width')});
-                });
-            }
-        } catch (e) {
-            console.log(e);
-        }
-    }
 
 
 
-    if (woocs_drop_down_view == 'ddslick') {
-        try {
-            jQuery.each(jQuery('select.woocommerce-currency-switcher'), function (index, obj) {
-                var width = jQuery(obj).data('width');
-                var flag_position = jQuery(obj).data('flag-position');
-                jQuery(obj).ddslick({
-                    //data: ddData,
-                    width: width,
-                    imagePosition: flag_position,
-                    selectText: "Select currency",
-                    //background:'#ff0000',
-                    onSelected: function (data) {
-                        if (!woocs_loading_first_time)
-                        {
-                            var form = jQuery(data.selectedItem).closest('form.woocommerce-currency-switcher-form');
-                            jQuery(form).find('input[name="woocommerce-currency-switcher"]').eq(0).val(data.selectedData.value);
 
-                            if (Object.keys(woocs_array_of_get).length == 0) {
-                                //jQuery(form).submit();
-                                woocs_redirect(data.selectedData.value);
-                            } else {
-                                woocs_redirect(data.selectedData.value);
-                            }
-
-
-                        }
-                    }
-                });
-            });
-
-        } catch (e) {
-            console.log(e);
-        }
-    }
-
-    woocs_loading_first_time = false;
-
-
-    if (woocs_drop_down_view == 'wselect' && woocs_is_mobile != 1) {
-        try {
-            //https://github.com/websanova/wSelect#wselectjs
-            jQuery('select.woocommerce-currency-switcher').wSelect({
-                size: 7
-            });
-        } catch (e) {
-            console.log(e);
-        }
-    }
-
-    //for flags view instead of drop-down
-    jQuery('.woocs_flag_view_item').on("click", function () {
-        if (woocs_sumbit_currency_changing) {
-            if (jQuery(this).hasClass('woocs_flag_view_item_current')) {
-                return false;
-            }
-            //***
-
-            if (Object.keys(woocs_array_of_get).length == 0) {
-                window.location = window.location.href + '?currency=' + jQuery(this).data('currency');
-            } else {
-
-                woocs_redirect(jQuery(this).data('currency'));
-
-            }
-        }
-
-        return false;
-    });
 
     //for converter
     if (jQuery('.woocs_converter_shortcode').length) {
