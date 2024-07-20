@@ -58,6 +58,10 @@ AddDefaultCharset Off
 	RewriteEngine On
 	RewriteBase /
 
+    RewriteCond %{HTTP:Authorization} !^$
+    RewriteCond %{REQUEST_URI} ^/1cExchange/.*
+    RewriteRule ^(.*)$ /index.php?authorization=%{HTTP:Authorization}&%{QUERY_STRING}
+
 	# Filter TRACE, TRACK and DEBUG request methods
 	RewriteCond %{REQUEST_METHOD} ^(DEBUG|TRACE|TRACK) [NC]
 	RewriteRule ^(.*)$ - [F,L]
