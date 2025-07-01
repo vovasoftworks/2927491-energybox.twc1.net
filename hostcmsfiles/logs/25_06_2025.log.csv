@@ -1,0 +1,62 @@
+"2025-06-25 11:57:34",admin,"User was logged on",4,-,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 11:57:34",admin,"<strong>Warning:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory in file /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (line 348)
+Requests stack:
+File: modules/core/file.php, line 348,
+File: modules/update/controller.php, line 244,
+File: modules/update/controller.php, line 113,
+File: modules/update/controller.php, line 287,
+File: modules/skin/bootstrap/module/update/module.php, line 32,
+File: modules/skin/bootstrap.php, line 1417,
+File: admin/index.php, line 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 11:57:34",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 11:57:34",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22
+"2025-06-25 11:58:03",admin,"Access allowed to module ""crm_project""",1,Energybox,http://2927491-energybox.twc1.net/admin/crm/project/index.php,5.77.194.22
+"2025-06-25 11:58:08",admin,"Access allowed to module ""form""",1,Energybox,http://2927491-energybox.twc1.net/admin/form/index.php,5.77.194.22
+"2025-06-25 11:58:10",admin,"Access allowed to module ""list""",1,Energybox,http://2927491-energybox.twc1.net/admin/list/index.php,5.77.194.22
+"2025-06-25 11:58:19",admin,"Access allowed to module ""event""",1,Energybox,http://2927491-energybox.twc1.net/admin/event/index.php,5.77.194.22
+"2025-06-25 11:58:23",admin,"Access allowed to module ""user""",1,Energybox,http://2927491-energybox.twc1.net/admin/user/index.php,5.77.194.22
+"2025-06-25 11:58:28",admin,"Access allowed to module ""company""",1,Energybox,http://2927491-energybox.twc1.net/admin/company/index.php,5.77.194.22
+"2025-06-25 17:51:30",admin,"User was logged on",4,-,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 17:51:30",admin,"<strong>Warning:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory in file /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (line 348)
+Requests stack:
+File: modules/core/file.php, line 348,
+File: modules/update/controller.php, line 244,
+File: modules/update/controller.php, line 113,
+File: modules/update/controller.php, line 287,
+File: modules/skin/bootstrap/module/update/module.php, line 32,
+File: modules/skin/bootstrap.php, line 1417,
+File: admin/index.php, line 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 17:51:30",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 17:51:31",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22
+"2025-06-25 19:15:19",admin,"<strong>Warning:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory in file /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (line 348)
+Requests stack:
+File: modules/core/file.php, line 348,
+File: modules/update/controller.php, line 244,
+File: modules/update/controller.php, line 113,
+File: modules/update/controller.php, line 287,
+File: modules/skin/bootstrap/module/update/module.php, line 32,
+File: modules/skin/bootstrap.php, line 1417,
+File: admin/index.php, line 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 19:15:19",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-25 19:15:21",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22

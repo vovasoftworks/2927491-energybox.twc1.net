@@ -1,0 +1,140 @@
+"2025-06-30 09:49:27",admin,"Access allowed to module ""company""",1,Energybox,http://2927491-energybox.twc1.net/admin/company/index.php,5.77.194.22
+"2025-06-30 09:49:54",admin,"Access allowed to module ""crm_project""",1,Energybox,http://2927491-energybox.twc1.net/admin/crm/project/index.php,5.77.194.22
+"2025-06-30 09:49:56",admin,"Access allowed to module ""event""",1,Energybox,http://2927491-energybox.twc1.net/admin/event/index.php,5.77.194.22
+"2025-06-30 09:49:59",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php,5.77.194.22
+"2025-06-30 09:49:59",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22
+"2025-06-30 09:49:59",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php,5.77.194.22
+"2025-06-30 09:50:00",admin,"Access allowed to module ""company""",1,Energybox,http://2927491-energybox.twc1.net/admin/company/index.php,5.77.194.22
+"2025-06-30 09:50:01",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php,5.77.194.22
+"2025-06-30 09:50:01",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php,5.77.194.22
+"2025-06-30 09:50:02",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22
+"2025-06-30 09:50:05",admin,"Access allowed to module ""company""",1,Energybox,http://2927491-energybox.twc1.net/admin/company/index.php,5.77.194.22
+"2025-06-30 09:52:19",admin,"User was logged on",4,-,http://2927491-energybox.twc1.net/admin/company/index.php,5.77.194.22
+"2025-06-30 09:52:19",admin,"Access allowed to module ""company""",1,Energybox,http://2927491-energybox.twc1.net/admin/company/index.php,5.77.194.22
+"2025-06-30 15:35:50",admin,"<strong>Warning:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory in file /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (line 348)
+Requests stack:
+File: modules/core/file.php, line 348,
+File: modules/update/controller.php, line 244,
+File: modules/update/controller.php, line 113,
+File: modules/update/controller.php, line 287,
+File: modules/skin/bootstrap/module/update/module.php, line 32,
+File: modules/skin/bootstrap.php, line 1417,
+File: admin/index.php, line 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-30 15:35:50",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-06-30 15:35:52",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22
+"2025-06-30 15:50:21",admin,"Access allowed to module ""market""",1,Energybox,http://2927491-energybox.twc1.net/admin/market/index.php,5.77.194.22
+"2025-06-30 15:50:21",admin,"<strong>Warning:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory in file /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (line 348)
+Requests stack:
+File: modules/core/file.php, line 348,
+File: modules/update/controller.php, line 244,
+File: modules/update/controller.php, line 113,
+File: modules/update/controller.php, line 287,
+File: modules/market/controller.php, line 1003,
+File: admin/market/index.php, line 201",3,Energybox,http://2927491-energybox.twc1.net/admin/market/index.php,5.77.194.22
+"2025-06-30 15:50:21",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/market/controller.php:1003 Update_Controller->parseUpdates
+admin/market/index.php:201 Market_Controller->showItemsList",0,Energybox,http://2927491-energybox.twc1.net/admin/market/index.php,5.77.194.22
+"2025-06-30 15:50:35",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-06-30 16:12:00",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php,5.77.194.22
+"2025-06-30 16:12:01",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php,5.77.194.22
+"2025-06-30 16:12:01",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22
+"2025-06-30 16:12:05",admin,"Access allowed to module ""company""",1,Energybox,http://2927491-energybox.twc1.net/admin/company/index.php,5.77.194.22
+"2025-06-30 16:12:07",admin,"Access allowed to module ""user""",1,Energybox,http://2927491-energybox.twc1.net/admin/user/index.php,5.77.194.22
+"2025-06-30 16:17:25",undefined,"Неверные данные для аутентификации",4,-,http://2927491-energybox.twc1.net/admin/index.php,77.223.70.94
+"2025-06-30 16:20:45",admin,"Вход в систему управления",4,-,http://2927491-energybox.twc1.net/admin/index.php,77.223.70.94
+"2025-06-30 16:20:45",admin,"<strong>Предупреждение:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory в файле /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (строка 348)
+Стек вызовов:
+Файл: modules/core/file.php, строка 348,
+Файл: modules/update/controller.php, строка 244,
+Файл: modules/update/controller.php, строка 113,
+Файл: modules/update/controller.php, строка 287,
+Файл: modules/skin/bootstrap/module/update/module.php, строка 32,
+Файл: modules/skin/bootstrap.php, строка 1417,
+Файл: admin/index.php, строка 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,77.223.70.94
+"2025-06-30 16:20:45",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,77.223.70.94
+"2025-06-30 16:20:46",admin,"Доступ к модулю ""calendar"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,77.223.70.94
+"2025-06-30 16:21:02",admin,"Доступ к модулю ""form"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/form/index.php,77.223.70.94
+"2025-06-30 16:21:02",admin,"Доступ к модулю ""list"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/list/index.php,77.223.70.94
+"2025-06-30 16:21:11",admin,"Доступ к модулю ""search"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/search/index.php,77.223.70.94
+"2025-06-30 16:21:12",admin,"Доступ к модулю ""list"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/list/index.php,77.223.70.94
+"2025-06-30 16:21:15",admin,"Доступ к модулю ""report"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/report/index.php,77.223.70.94
+"2025-06-30 16:21:20",admin,"Доступ к модулю ""site"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,77.223.70.94
+"2025-06-30 16:21:27",admin,"Доступ к модулю ""site"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,77.223.70.94
+"2025-06-30 16:21:44",admin,"Доступ к модулю ""informationsystem"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/informationsystem/index.php,77.223.70.94
+"2025-06-30 16:21:46",admin,"Доступ к модулю ""document"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/document/index.php,77.223.70.94
+"2025-06-30 16:21:47",admin,"Доступ к модулю ""printlayout"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/printlayout/index.php,77.223.70.94
+"2025-06-30 16:21:51",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/index.php,77.223.70.94
+"2025-06-30 16:21:53",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_dir_id=0,77.223.70.94
+"2025-06-30 16:21:54",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=12,77.223.70.94
+"2025-06-30 16:21:59",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=37,77.223.70.94
+"2025-06-30 16:22:00",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=38,77.223.70.94
+"2025-06-30 19:18:09",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=checkauth,141.101.181.1
+"2025-06-30 19:18:09",admin,"1С, удаление директорий предыдущих месяцев",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=checkauth,141.101.181.1
+"2025-06-30 19:18:10",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=checkauth,141.101.181.1
+"2025-06-30 19:18:10",admin,"1С, удаление директорий предыдущих месяцев",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=checkauth,141.101.181.1
+"2025-06-30 19:18:10",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=init&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"1С, mode=init",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=init&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=import0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"1С, type=catalog, mode=file, destination=/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/tmp/1c_exchange_files/month-6/import0_1.xml",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=import0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"1С, type=catalog, mode=file, destination=/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/tmp/1c_exchange_files/month-6/import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=import0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"1С, type=catalog, mode=import, file=import0_1.xml",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=import0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:10",admin,"1С, импорт 1 изображений товара ID=88",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=import0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:11",admin,"1С, status: success, timeout: 25, type=catalog, mode=import, file=import0_1.xml, size=22959",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=import0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:11",admin,"1С, Delete file: import0_1.xml",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=import0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=checkauth,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, удаление директорий предыдущих месяцев",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=checkauth,141.101.181.1
+"2025-06-30 19:18:12",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=init&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, mode=init",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=init&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=offers0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, type=catalog, mode=file, destination=/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/tmp/1c_exchange_files/month-6/offers0_1.xml",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=offers0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, type=catalog, mode=file, destination=/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/tmp/1c_exchange_files/month-6/import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, DELETE previous file, type=catalog, mode=file, destination=/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/tmp/1c_exchange_files/month-6/import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png, filesize: 505540, fileLimit: 10000000, time: 1751300290, current: 1751300292",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=file&filename=import_files/a8/a8e1eb82298311ef854800155d46f6eb_a908443a298311ef854800155d46f6eb.png&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"Вход в систему управления",4,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=offers0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, type=catalog, mode=import, file=offers0_1.xml",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=offers0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, status: success, timeout: 25, type=catalog, mode=import, file=offers0_1.xml, size=7943",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=offers0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:12",admin,"1С, Delete file: offers0_1.xml",0,Energybox,http://2927491-energybox.twc1.net/1cExchange/?type=catalog&mode=import&filename=offers0_1.xml&sessid=,141.101.181.1
+"2025-06-30 19:18:48",admin,"Вход в систему управления",4,-,http://2927491-energybox.twc1.net/admin/index.php,46.163.142.177
+"2025-06-30 19:18:48",admin,"<strong>Предупреждение:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory в файле /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (строка 348)
+Стек вызовов:
+Файл: modules/core/file.php, строка 348,
+Файл: modules/update/controller.php, строка 244,
+Файл: modules/update/controller.php, строка 113,
+Файл: modules/update/controller.php, строка 287,
+Файл: modules/skin/bootstrap/module/update/module.php, строка 32,
+Файл: modules/skin/bootstrap.php, строка 1417,
+Файл: admin/index.php, строка 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,46.163.142.177
+"2025-06-30 19:18:48",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,46.163.142.177
+"2025-06-30 19:18:49",admin,"Доступ к модулю ""calendar"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,46.163.142.177
+"2025-06-30 19:18:59",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/index.php,46.163.142.177
+"2025-06-30 19:19:00",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_dir_id=0,46.163.142.177
+"2025-06-30 19:19:02",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=12,46.163.142.177
+"2025-06-30 19:19:04",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=67,46.163.142.177
+"2025-06-30 19:19:07",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=70,46.163.142.177

@@ -1,0 +1,867 @@
+"2025-07-01 11:06:42",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-07-01 11:07:13",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-07-01 11:07:15",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-07-01 11:08:25",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-07-01 11:08:30",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-07-01 11:10:06",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-07-01 11:11:25",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php?hostcms[action]=&hostcms[operation]=&hostcms[current]=1&hostcms[sortingfield]=159&hostcms[sortingdirection]=1&hostcms[window]=id_content&hostcms[view]=list&hostcms[filterId]=&hostcms[checked][0][1]=1,5.77.194.22
+"2025-07-01 11:11:27",admin,"Access allowed to module ""benchmark""",1,Energybox,http://2927491-energybox.twc1.net/admin/benchmark/index.php,5.77.194.22
+"2025-07-01 11:11:29",admin,"Access allowed to module ""notification""",1,Energybox,http://2927491-energybox.twc1.net/admin/notification/index.php,5.77.194.22
+"2025-07-01 11:11:38",admin,"Access allowed to module ""market""",1,Energybox,http://2927491-energybox.twc1.net/admin/market/index.php,5.77.194.22
+"2025-07-01 11:11:38",admin,"<strong>Warning:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory in file /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (line 348)
+Requests stack:
+File: modules/core/file.php, line 348,
+File: modules/update/controller.php, line 244,
+File: modules/update/controller.php, line 113,
+File: modules/update/controller.php, line 287,
+File: modules/market/controller.php, line 1003,
+File: admin/market/index.php, line 201",3,Energybox,http://2927491-energybox.twc1.net/admin/market/index.php,5.77.194.22
+"2025-07-01 11:11:38",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/market/controller.php:1003 Update_Controller->parseUpdates
+admin/market/index.php:201 Market_Controller->showItemsList",0,Energybox,http://2927491-energybox.twc1.net/admin/market/index.php,5.77.194.22
+"2025-07-01 11:21:07",admin,"<strong>Warning:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory in file /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (line 348)
+Requests stack:
+File: modules/core/file.php, line 348,
+File: modules/update/controller.php, line 244,
+File: modules/update/controller.php, line 113,
+File: modules/update/controller.php, line 287,
+File: modules/skin/bootstrap/module/update/module.php, line 32,
+File: modules/skin/bootstrap.php, line 1417,
+File: admin/index.php, line 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-07-01 11:21:07",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,5.77.194.22
+"2025-07-01 11:21:09",admin,"Access allowed to module ""calendar""",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,5.77.194.22
+"2025-07-01 11:21:16",admin,"Access allowed to module ""site""",1,Energybox,http://2927491-energybox.twc1.net/admin/site/index.php,5.77.194.22
+"2025-07-01 12:00:25",admin,"Вход в систему управления",4,-,http://2927491-energybox.twc1.net/admin/index.php,89.110.84.183
+"2025-07-01 12:00:25",admin,"<strong>Предупреждение:</strong> fopen(/var/www/fastuser/data/www/2927491-energybox.twc1.net/hostcmsfiles/update/updatelist.xml): failed to open stream: No such file or directory в файле /var/www/fastuser/data/www/2927491-energybox.twc1.net/modules/core/file.php (строка 348)
+Стек вызовов:
+Файл: modules/core/file.php, строка 348,
+Файл: modules/update/controller.php, строка 244,
+Файл: modules/update/controller.php, строка 113,
+Файл: modules/update/controller.php, строка 287,
+Файл: modules/skin/bootstrap/module/update/module.php, строка 32,
+Файл: modules/skin/bootstrap.php, строка 1417,
+Файл: admin/index.php, строка 126",3,Energybox,http://2927491-energybox.twc1.net/admin/index.php,89.110.84.183
+"2025-07-01 12:00:25",admin,"File 'hostcmsfiles/update/updatelist.xml' open error .
+modules/core/file.php:368 Core_Exception->__construct
+modules/update/controller.php:244 Core_File::write
+modules/update/controller.php:113 Update_Controller->getUpdates
+modules/update/controller.php:287 Update_Controller->_getXml
+modules/skin/bootstrap/module/update/module.php:32 Update_Controller->parseUpdates
+modules/skin/bootstrap.php:1417 Skin_Bootstrap_Module_Update_Module->widget
+admin/index.php:126 Skin_Bootstrap->index",0,Energybox,http://2927491-energybox.twc1.net/admin/index.php,89.110.84.183
+"2025-07-01 12:00:27",admin,"Доступ к модулю ""calendar"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/calendar/index.php?loadEvents,89.110.84.183
+"2025-07-01 12:00:31",admin,"Доступ к модулю ""informationsystem"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/informationsystem/index.php,89.110.84.183
+"2025-07-01 12:00:32",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/index.php,89.110.84.183
+"2025-07-01 12:00:33",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_dir_id=0,89.110.84.183
+"2025-07-01 12:00:35",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=12,89.110.84.183
+"2025-07-01 12:00:36",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=37,89.110.84.183
+"2025-07-01 12:00:37",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=38,89.110.84.183
+"2025-07-01 12:00:54",admin,"Доступ к модулю ""shop"" разрешен",1,Energybox,http://2927491-energybox.twc1.net/admin/shop/item/index.php?shop_id=1&shop_group_id=37,89.110.84.183
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 16:35:47",admin,"<strong>Deprecated:</strong> Creation of dynamic property Skin_Bootstrap_Module_Event_Module::$_path is deprecated in file /var/www/2927491-energybox.twc1.net/modules/skin/bootstrap/module/event/module.php (line 51)
+Requests stack:
+File: modules/skin/bootstrap/module/event/module.php, line 51,
+File: modules/skin/bootstrap.php, line 1293,
+File: admin/index.php, line 126",2,Energybox,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:47",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=99&type=4,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:55",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=85,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",admin,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://localhost:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=100&type=0,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=80,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/list/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/form/module.php, line 41,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/search/module.php, line 49,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
+"2025-07-01 13:35:56",undefined,"<strong>Deprecated:</strong> Implicit conversion from float 1.8446744069414584E+19 to int loses precision in file /var/www/2927491-energybox.twc1.net/modules/core/core.php (line 767)
+Requests stack:
+File: modules/core/core.php, line 767,
+File: modules/backup/module.php, line 50,
+File: modules/core/module.php, line 172,
+File: modules/core/module.php, line 152,
+File: modules/module/model.php, line 118,
+File: modules/core/core.php, line 244,
+File: modules/core/core.php, line 150,
+File: bootstrap.php, line 41,
+File: admin/index.php, line 10",2,-,http://127.0.0.1:8000/admin/index.php?ajaxWidgetLoad&moduleId=20&type=82,127.0.0.1
